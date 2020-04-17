@@ -5,7 +5,7 @@ public class Student {
     public String firstName;
     public String arrivedFrom;
     /**
-     * course is unsigned Integer.
+     * course is unsigned integer.
      */
     public int course;
     public int id;
@@ -34,15 +34,4 @@ public class Student {
         return String.format("Fullname: %1$s %2$s, %3$d course, %4$d Id. From %5$s",
                 firstName, secondName, course, id, arrivedFrom);
     }
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (!(o instanceof Student)) return false;
-//
-//        if (((Student) o).course == this.course &&
-//                ((Student) o).arrivedFrom.contentEquals(this.arrivedFrom))
-//            return true;
-//
-//        return this.equals(o);
-//    }
 }

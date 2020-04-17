@@ -14,7 +14,7 @@ public class BinaryTree {
         root = insert(student, root);
     }
 
-    // FIXME: Level 2
+    // Level 2
     public List<Student> find(int withCourse, String notFrom) {
         List<Student> list = new ArrayList<>();
 
@@ -22,7 +22,7 @@ public class BinaryTree {
         return list;
     }
 
-    // FIXME: Level 3
+    // Level 3
     public void remove(int withCourse, String notFrom) {
         // handle root el
         while (root != null && root.student.course == withCourse &&
@@ -46,7 +46,7 @@ public class BinaryTree {
         rightsubtreeRemoveOp(root, withCourse, notFrom);
     }
 
-    // FIXME: Level 3
+    // Level 3
     private void leftsubreeRemoveOp(Node n, int withCourse, String notFrom) {
         while (n.left != null && n.left.student.course == withCourse &&
                 !n.left.student.arrivedFrom.contentEquals(notFrom)) {
@@ -68,7 +68,7 @@ public class BinaryTree {
         rightsubtreeRemoveOp(n.left, withCourse, notFrom);
     }
 
-    // FIXME: Level 3
+    // Level 3
     private void rightsubtreeRemoveOp(Node n, int withCourse, String notFrom) {
         while (n.right != null && n.right.student.course == withCourse &&
                 !n.right.student.arrivedFrom.contentEquals(notFrom)) {
@@ -90,7 +90,7 @@ public class BinaryTree {
         leftsubreeRemoveOp(n.right, withCourse, notFrom);
     }
 
-    // FIXME: Level 3
+    // Level 3
     private Student rightLeftmost(Node n) {
         if (n == null) return null;
         if (n.left != null && n.left.left == null) {
@@ -103,7 +103,7 @@ public class BinaryTree {
         return rightLeftmost(n.right);
     }
 
-    // FIXME: Level 3
+    // Level 3
     private Student leftRightmost(Node n) {
         if (n == null) return null;
         if (n.right != null && n.right.right == null) {
@@ -135,7 +135,7 @@ public class BinaryTree {
         }
     }
 
-    // FIXME: Level 2
+    // Level 2
     private void postOrderList(Node n, List<Student> list, int c, String from) {
         if (n != null) {
             postOrderList(n.left, list, c, from);
